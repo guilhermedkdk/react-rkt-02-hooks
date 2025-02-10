@@ -11,7 +11,12 @@ export const FormContainer = styled.div`
   font-size: 1.125rem;
   font-weight: bold;
   flex-wrap: wrap;
-  color: ${(props) => props.theme["gray-100"]};
+  color: ${(props) => props.theme.colors["gray-100"]};
+
+  @media (max-width: ${(props) => props.theme.maxWidth}) {
+    font-size: 1rem;
+    gap: 0.25rem;
+  }
 `;
 
 const BaseInput = styled.input`
@@ -19,20 +24,25 @@ const BaseInput = styled.input`
   padding: 0 0.5rem;
 
   border: 0;
-  border-bottom: 2px solid ${(props) => props.theme["gray-500"]};
+  border-bottom: 2px solid ${(props) => props.theme.colors["gray-500"]};
   background: transparent;
 
   font-weight: bold;
   font-size: 1.125rem;
-  color: ${(props) => props.theme["gray-100"]};
+  color: ${(props) => props.theme.colors["gray-100"]};
 
   &:focus {
     box-shadow: none;
-    border-color: ${(props) => props.theme["green-500"]};
+    border-color: ${(props) => props.theme.colors["green-500"]};
   }
 
   &::placeholder {
-    color: ${(props) => props.theme["gray-500"]};
+    color: ${(props) => props.theme.colors["gray-500"]};
+  }
+
+  @media (max-width: ${(props) => props.theme.maxWidth}) {
+    font-size: 1rem;
+    height: 2rem;
   }
 `;
 
@@ -46,4 +56,8 @@ export const TaskInput = styled(BaseInput)`
 
 export const MinutesAmountInput = styled(BaseInput)`
   width: 4rem;
+
+  @media (max-width: ${(props) => props.theme.maxWidth}) {
+    width: 3rem;
+  }
 `;

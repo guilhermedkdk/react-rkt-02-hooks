@@ -9,7 +9,15 @@ export const HistoryContainer = styled.main`
 
   h1 {
     font-size: 1.5rem;
-    color: ${(props) => props.theme["gray-100"]};
+    color: ${(props) => props.theme.colors["gray-100"]};
+  }
+
+  @media (max-width: ${(props) => props.theme.maxWidth}) {
+    padding: 2rem;
+
+    h1 {
+      font-size: 1.25rem;
+    }
   }
 `;
 
@@ -29,11 +37,11 @@ export const HistoryList = styled.div`
       text-align: left;
       padding: 1rem;
 
-      background-color: ${(props) => props.theme["gray-600"]};
+      background-color: ${(props) => props.theme.colors["gray-600"]};
 
       font-size: 0.875rem;
       line-height: 1.6;
-      color: ${(props) => props.theme["gray-100"]};
+      color: ${(props) => props.theme.colors["gray-100"]};
 
       &:first-child {
         border-top-left-radius: 8px;
@@ -49,8 +57,8 @@ export const HistoryList = styled.div`
     td {
       padding: 1rem;
 
-      border-top: 4px solid ${(props) => props.theme["gray-800"]};
-      background-color: ${(props) => props.theme["gray-700"]};
+      border-top: 4px solid ${(props) => props.theme.colors["gray-800"]};
+      background-color: ${(props) => props.theme.colors["gray-700"]};
 
       font-size: 0.875rem;
       line-height: 1.6;
@@ -62,6 +70,19 @@ export const HistoryList = styled.div`
 
       &:last-child {
         padding-right: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: ${(props) => props.theme.maxWidth}) {
+    margin-top: 1rem;
+
+    table {
+      min-width: 100%;
+
+      th,
+      td {
+        padding: 0.5rem;
       }
     }
   }
@@ -89,6 +110,16 @@ export const Status = styled.span<StatusProps>`
     margin-bottom: 2px;
 
     border-radius: 999px;
-    background: ${(props) => props.theme[STATUS_COLORS[props.statusColor]]};
+    background: ${(props) =>
+      props.theme.colors[STATUS_COLORS[props.statusColor]]};
+  }
+
+  @media (max-width: ${(props) => props.theme.maxWidth}) {
+    gap: 0.25rem;
+
+    &::before {
+      width: 0.25rem;
+      height: 0.25rem;
+    }
   }
 `;

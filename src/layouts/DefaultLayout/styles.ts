@@ -10,6 +10,11 @@ export const LayoutContainer = styled.div`
   margin: 5rem auto;
   padding: 2.5rem;
 
-  background: ${(props) => props.theme["gray-800"]};
+  background: ${(props) => props.theme.colors["gray-800"]};
   border-radius: 8px;
+
+  @media (max-width: ${(props) => props.theme.maxWidth}) {
+    padding: 1.5rem;
+    margin: 2rem;
+  }
 `;
