@@ -15,12 +15,11 @@ Uma aplicação de temporizador por ciclos feita como forma de estudos do curso 
 
 - React
 - TypeScript
-- Git e Github
 - FIGMA
 
 ## 💻 Projeto
 
-O "Ignite Timer" foi um mini projeto do curso de ReactJS da Rocketseat no módulo "Hooks". Onde consolidei conhecimentos sobre Context API para estado global, useReducer com Immer para imutabilidade, React Router para navegação, date-fns para cálculos de tempo e persistência em localStorage.
+O "Ignite Timer" foi um mini projeto do curso de ReactJS da Rocketseat no módulo "Hooks". Onde consolidei conhecimentos sobre Context API para estado global, imutabilidade, React Router, date-fns e persistência em localStorage.
 
 ## 📚 Aprendizados
 
@@ -29,6 +28,5 @@ Este projeto foi feito dentro do curso de ReactJS no módulo "Hooks" da Rocketse
 ### React
 - Hooks
 - Context API
-- useReducer
-- Immer
+- Imutabilidade
 - React Router
